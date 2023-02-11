@@ -21,6 +21,20 @@ const Products = db.define(
         len: [3, 100],
       },
     },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+    url: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
     price: {
       type: DataTypes.INTEGER,
       allowNull: false,
